@@ -1,0 +1,34 @@
+{% extends 'cover.html.twig' %}
+
+{% block title %}AwesomeCandidate index{% endblock %}
+
+{% block body %}
+    <table class="table table-light">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>TwitterHandle</th>
+                <th>Is Awesome?</th>
+                <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for awesome_candidate in awesome_candidates %}
+            <tr>
+                <td>{{ awesome_candidate.id }}</td>
+                <td>{{ awesome_candidate.name }}</td>
+                <td>{{ awesome_candidate.twitterHandle }}</td>
+                <td>{{ awesome_candidate.isAwesome ? 'Yes' : 'No' }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">No records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="btn btn-lg btn-secondary fw-bold border-white bg-white" href="{{ path('awesome_candidate_new') }}">
+        Add Candidate
+    </a>
+{% endblock %}

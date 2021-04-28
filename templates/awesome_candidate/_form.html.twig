@@ -1,0 +1,11 @@
+{{ form_start(form) }}
+    <p>
+        {{ form_widget(form.name, { 'attr': { 'class' : 'form-control', 'placeholder': 'Name', 'required' : 'required'}}) }}
+    </p>
+    <p>
+        {{ form_widget(form.twitterHandle, { 'attr': { 'class' : 'form-control form-control-sm', 'placeholder': '@twitterUsername'}}) }}
+        {{ form_help(form.twitterHandle) }}
+    </p>
+
+    <button class="btn btn-lg btn-secondary fw-bold border-white bg-white">{{ button_label|default('Are you Awesome?') }}</button>
+{{ form_end(form) }}
