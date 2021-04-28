@@ -20,5 +20,4 @@ COPY . .
 
 RUN composer install --no-dev --optimize-autoloader --no-scripts
 
-CMD php bin/console cache:clear --env=prod \
-    && php -S 0.0.0.0:80 -t public
+CMD php -S 0.0.0.0:80 -t public
