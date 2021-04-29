@@ -14,7 +14,7 @@ make dev
 
 **Requires PHP 8+** for local development.
 
-## Deploy
+## Deploy
 
 ```
 make build
