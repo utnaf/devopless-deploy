@@ -20,4 +20,6 @@ COPY . .
 
 RUN composer install --no-dev --optimize-autoloader --no-scripts
 
-CMD php -S 0.0.0.0:80 -t public
+EXPOSE 8000
+
+CMD php -S 0.0.0.0:8000 -t public

@@ -7,6 +7,6 @@ build:
 	docker push utnaf/awesome.app:latest
 
 deploy:
-	ssh utnaf@192.168.1.106 './deploy.sh'
+	ssh utnaf@192.168.1.108 './deploy.sh'
 
 bd: build deploy
