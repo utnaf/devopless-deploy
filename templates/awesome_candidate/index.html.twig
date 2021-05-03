@@ -9,16 +9,14 @@
                 <th>Name</th>
                 <th>TwitterHandle</th>
                 <th>Is Awesome?</th>
-                <th>&nbsp;</th>
             </tr>
         </thead>
         <tbody>
         {% for awesome_candidate in awesome_candidates %}
             <tr>
-                <td>{{ awesome_candidate.id }}</td>
                 <td>{{ awesome_candidate.name }}</td>
                 <td>{{ awesome_candidate.twitterHandle }}</td>
-                <td>{{ awesome_candidate.isAwesome ? 'Yes' : 'No' }}</td>
+                <td>{{ awesome_candidate.isAwesome ? '✅' : '❌' }}</td>
             </tr>
         {% else %}
             <tr>
